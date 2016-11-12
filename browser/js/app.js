@@ -1,2 +1,2 @@
-console.log('Here')
-let myApp = angular.module('myApp', []);
+console.log('Here dshkafdha')
+var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'ngAnimate']);

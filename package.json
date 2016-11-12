@@ -6,6 +6,12 @@
   },
   "dependencies": {
     "angular": "^1.5.8",
-    "express": "latest"
+    "angular-animate": "^1.5.8",
+    "angular-messages": "^1.5.8",
+    "angular-ui-bootstrap": "^2.2.0",
+    "angular-ui-router": "^0.3.2",
+    "express": "latest",
+    "ui-bootstrap": "^0.1.6",
+    "ui-router": "^1.0.0-alpha.3"
   }
 }
