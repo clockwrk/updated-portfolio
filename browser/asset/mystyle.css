@@ -1,0 +1,13 @@
+body { 
+    padding-top: 50px; 
+}
+
+.nav-bar > li {
+    border:1px solid #333;
+    display:block;
+    float: right;
+    line-height:38px;
+    margin:0;
+    padding:0;
+    position:relative;
+ }

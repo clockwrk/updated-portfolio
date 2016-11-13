@@ -17,6 +17,11 @@ router.use(function (req, res, next){
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.static(path.join(__dirname, '/browser')));
 app.use(express.static(path.join(__dirname, '/node_modules')));
+app.use('/api/mail', function(req,res,next){
+
+	console.log(req.body)
+	next();
+})
 
 router.get('/',function (req, res) {
 	res.sendFile(__dirname+'/index.html');

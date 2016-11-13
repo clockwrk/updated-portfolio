@@ -1,5 +1,7 @@
 app.config(function($stateProvider){
 	$stateProvider.state('contact', {
-		templateUrl: '/js/contact/contact.html'
+		url:'/contact',
+		templateUrl: '/js/contact/contact.html',
+		controler: 'contactController'
 	})
 })
