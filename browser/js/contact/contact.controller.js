@@ -1,9 +1,9 @@
 console.log('contact controller loadeed')
 
-app.controller('contactController', ['$scope'], function($scope, controllerFactory){
+app.controller('contactController', function($scope){
 	console.log('Loaded controller for contact')
 
-	$scope.message = null;
+	$scope.message = 'hi';
 	$scope.email = null;
 	$scope.name = null;
 
@@ -18,6 +18,4 @@ app.controller('contactController', ['$scope'], function($scope, controllerFacto
 
 		}
 	}
-
-
 })
