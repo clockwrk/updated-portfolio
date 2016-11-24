@@ -1,6 +1,6 @@
-console.log("in nav barsfdjkhafklhs")
-app.directive('navbar', function($rootScope, $state) {
-    console.log('loading nav bar')
+
+app.directive('post', function($rootScope, $state) {
+    console.log('post directive')
 
     return {
         restrict: 'E',

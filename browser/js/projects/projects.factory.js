@@ -1,8 +1,5 @@
 app.factory('projectsFactory', function(){
 	let FactoryObj = {};
-
-	FactoryObj.getAllProjects = function(){
-
-		
+	FactoryObj.getAllProjects = function(){		
 	}
 })
