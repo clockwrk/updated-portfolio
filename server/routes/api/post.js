@@ -6,6 +6,8 @@ module.exports = router;
 
 router.get('/', function(req, res, next) {
 
+    console.log('Hit the comment route')
+
     Post.findAll()
         .then(function(posts) {
             res.send(posts)

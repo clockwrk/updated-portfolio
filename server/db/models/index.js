@@ -4,6 +4,7 @@ var marked = require('marked');
 var Post = require('post');
 var Reply = require('reply')
 
-Reply.belongsTo(Post)
+Reply.belongsTo(Post, {foreignKey: 'post_id'})
+Post.hasMany(Reply, { foreignKey: 'post_id'})
 
 module.exports = db;

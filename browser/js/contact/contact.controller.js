@@ -1,12 +1,17 @@
 console.log('contact controller loadeed')
 
-app.controller('contactController', function($scope) {
+app.controller('contactController', function($scope, feedBackFactory) {
     console.log('Loaded controller for contact')
+
+    $scope.posts = posts;
 
 
 
     $scope.submitForm = function(data) {
         console.log('Submitting', data)
+
+
+        feedBackFactory.postComment(data.message)
 
         console.log($scope.userForm)
 

@@ -1,9 +1,27 @@
+console.log("feedbackfactory loaded")
+
 app.factory('feedBackFactory', function($http) {
-    return {
-        getposts: function() {
-            return $http.get('/api/post')
-                .then(function(response) {
-                    return response.data }).catch()
-        }
+    console.log('loading feedbackfactory')
+
+    var feedBackFactory = {}
+
+    feedBackFactory.getPosts = function() {
+        return $http.get('/api/comment')
+            .then(function(response) {
+            	console.log('getting comments')
+                return response.data
+            })
+            .catch()
     }
+
+    feedBackFactory.postComment = function(content) {
+        return $http.post('/api/comment', content)
+            .then(function(succesfulcomment) {
+                return succesfulcomment.data
+            })
+            .catch()
+    }
+
+    return feedBackFactory
+
 })

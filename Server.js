@@ -8,6 +8,11 @@ let morgan = require('morgan');
 
 router.use(morgan(':method :url :status :response-time ms - :res[content-length]'));
 
+
+
+
+app.use('/api', require('/server/routes'));
+
 router.use(function (req, res, next){
 	console.log('/' + req.method);
 	next();

@@ -5,7 +5,8 @@ app.config(function($stateProvider){
 		controller: 'contactController',
 		resolve: {
 			posts: function(feedBackFactory){
-				return feedBackFactory.getpost();
+				console.log('invoking feedBackFactory')
+				return feedBackFactory.getPosts();
 			}
 		}
 	})
