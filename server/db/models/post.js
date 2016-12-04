@@ -1,6 +1,7 @@
-var db = require("index");
+var db = require("./_db.js");
+var Sequelize = require('sequelize');
 
-var Post = db.define('post', {
+module.exports = db.define('post', {
     content: {
         type: Sequelize.STRING,
         allowNull: false
@@ -15,6 +16,4 @@ var Post = db.define('post', {
     }
 })
 
-module.exports = {
-	Post: Post
-}
+

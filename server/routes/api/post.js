@@ -1,14 +1,19 @@
 var express = require('express')
 var router = express.Router();
-var Post = require('../../db/models/post')
+var Post = require('../../db/models/post.js')
 var Promise = require('bluebird')
 module.exports = router;
+
+
+
 
 router.get('/', function(req, res, next) {
 
     console.log('Hit the comment route')
 
-    Post.findAll()
+    console.log(Post)
+
+    Post.findAll({})
         .then(function(posts) {
             res.send(posts)
         })
@@ -25,6 +30,10 @@ router.get('/:postID', function(req, res, next) {
 })
 
 router.post('/', function(req, res, next) {
+
+    console.log('Hit post route')
+
+    console(req.body)
 
     Post.create({ content: req.body.content })
         .then(function() {

@@ -1,7 +1,7 @@
-console.log('contact controller loadeed')
+
 
 app.controller('contactController', function($scope, feedBackFactory) {
-    console.log('Loaded controller for contact')
+
 
     $scope.posts = posts;
 
@@ -11,7 +11,7 @@ app.controller('contactController', function($scope, feedBackFactory) {
         console.log('Submitting', data)
 
 
-        feedBackFactory.postComment(data.message)
+        feedBackFactory.postComment(data)
 
         console.log($scope.userForm)
 
@@ -30,7 +30,7 @@ app.controller('contactController', function($scope, feedBackFactory) {
         if ($scope.message && $scope.email && $scope.name) {
 
             controllerFactory.sendMessage($scope.name, $scope.email, $scope.message)
-            console.log('message sent')
+
 
         }
     }

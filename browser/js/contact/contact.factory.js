@@ -1,7 +1,5 @@
-console.log("feedbackfactory loaded")
-
 app.factory('feedBackFactory', function($http) {
-    console.log('loading feedbackfactory')
+
 
     var feedBackFactory = {}
 
@@ -15,6 +13,7 @@ app.factory('feedBackFactory', function($http) {
     }
 
     feedBackFactory.postComment = function(content) {
+
         return $http.post('/api/comment', content)
             .then(function(succesfulcomment) {
                 return succesfulcomment.data

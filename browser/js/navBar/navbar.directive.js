@@ -1,6 +1,6 @@
-console.log("in nav barsfdjkhafklhs")
+
 app.directive('navbar', function($rootScope, $state) {
-    console.log('loading nav bar')
+
 
     return {
         restrict: 'E',
@@ -11,7 +11,8 @@ app.directive('navbar', function($rootScope, $state) {
                 { label: 'Home', state: 'home' },
                 { label: 'Projects', state: 'projects' },
                 { label: 'About Me', state: 'about' },
-                { label: 'Contact Me', state: 'contact' }
+                { label: 'Contact Me', state: 'contact' },
+                { label: 'admin', state: 'admin' }
             ]
         }
     }

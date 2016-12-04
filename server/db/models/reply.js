@@ -1,10 +1,9 @@
-var db = require("index");
+var db = require("./_db.js");
+var Sequelize = require('sequelize');
 
-var Reply = db.define('Reply', {
+module.exports = db.define('Reply', {
     content: {
         type: Sequelize.STRING,
         allowNull: false
     }
 })
-
-module.exports = Reply

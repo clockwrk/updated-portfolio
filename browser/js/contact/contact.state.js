@@ -11,7 +11,7 @@ app.config(function($stateProvider){
 		}
 	})
 
-	console.log('loaded contact state')
+
 })
 
         // controller: function($scope) {

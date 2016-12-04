@@ -7,8 +7,12 @@ app.controller('projectController', function($scope) {
     ]
 })
 
+
+
 app.controller('singleProjectController', function($scope, projectFactory, $stateParams){
-	console.log('single Page Controller Loaded')
+
+	$scope.currentProject = currentProject;
+
 	console.log($stateParams)
 
 })
