@@ -4,9 +4,6 @@ var Project = require('../../db/models/project.js')
 var Promise = require('bluebird')
 module.exports = router;
 
-
-
-
 router.get('/', function(req, res, next) {
 
     console.log('Hit the project route')
@@ -31,10 +28,6 @@ router.get('/:projectID', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
 
-    console.log('Hit post route')
-
-    console(req.body)
-
     Project.create({ content: req.body.content })
         .then(function() {
             res.status(201)
@@ -48,14 +41,14 @@ router.put('/:projectID', function(req, res, send) {
                         id: req.params.projectID
                     }
                 })
-                .then(function(post) {
-                    res.send(post)
+                .then(function(project) {
+                    res.send(project)
                 })
                 .catch(next)
             })
             
-router.delete('/:postId', function(req, res, next){
-		Post.destroy({
+router.delete('/:projectID', function(req, res, next){
+		Project.destroy({
 			where: {
 				id: req.params.id
 			}

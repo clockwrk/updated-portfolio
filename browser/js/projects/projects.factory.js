@@ -3,6 +3,10 @@ app.factory('projectFactory', function($http){
 	projectFactory.getAllProjects = function(){		
 
 		return $http.get('/api/project')
+				.then(function(response){
+					return response.data
+				})
+				.catch()
 
 	}
 

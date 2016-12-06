@@ -17,6 +17,12 @@ router.use(function (req, res, next){
 	next();
 });
 
+router.get('/',function (req, res) {
+	console.log('IP address',req.ip)
+	res.sendFile(__dirname+'/index.html');
+});
+
+
 
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.static(path.join(__dirname, '/browser')));
@@ -27,9 +33,6 @@ app.use(express.static(path.join(__dirname, '/node_modules')));
 // 	next();
 // })
 
-router.get('/',function (req, res) {
-	res.sendFile(__dirname+'/index.html');
-});
 
 // router.get('/about',function(req, res){
 // 	res.sendFile(__dirname + '/views/' + 'about.html');

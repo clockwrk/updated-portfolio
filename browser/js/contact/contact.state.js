@@ -10,8 +10,6 @@ app.config(function($stateProvider){
 			}
 		}
 	})
-
-
 })
 
         // controller: function($scope) {
