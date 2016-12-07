@@ -1,18 +1,7 @@
-<!-- <div id="navbar" class="navbar">
-<nav class="navbar navbar-inverse" role='navigation' style=" box-sizing: border-box
-    ">
-    <div class="container"> -->
-
-        <ul class='sidebar-nav'>
-<!--         	<li class="sidebar-brand">Jose Renteria</li>
-        	<li>Fullstack Javascript developer<li> -->
-
-            <li class='navlinks' ng-repeat="link in links"  >
-
-                <a ui-sref-active="active" ui-sref="{{link.state}}"  style="font-family: 'Baskervile'">{{link.label}}</a>
-
-            </li>
-        </ul>
-<!--     </div>
-</nav> -->
+<div>
+    <ul class='sidebar-nav'>
+        <li class='navlinks' ng-repeat="link in links">
+            <a ui-sref-active="active" ui-sref="{{link.state}}" style="font-family: 'Baskervile'">{{link.label}}</a>
+        </li>
+    </ul>
 </div>

@@ -4,26 +4,17 @@ var Reply = require('../../db/models/reply')
 var Promise = require('bluebird')
 module.exports = router;
 
-// router.get('/', function(req, res, next) {
-
-//     Reply.findAll()
-//         .then(function(replies) {
-//             res.send(replies)
-//         })
-//         .catch(next);
-// })
-
 router.get('/:postId', function(req, res, next) {
 
-        Post.findById(req.params.postId)
-            .then(function(post){
+    Post.findById(req.params.postId)
+        .then(function(post) {
 
-                return post.getReplys()
-                    .then(function(associatedReplies){
-                        res.send(associatedReplies)
-                    })
-            })
-            .catch(next)
+            return post.getReplys()
+                .then(function(associatedReplies) {
+                    res.send(associatedReplies)
+                })
+        })
+        .catch(next)
 })
 
 router.post('/:postId', function(req, res, next) {
@@ -38,28 +29,3 @@ router.post('/:postId', function(req, res, next) {
         })
         .catch(next)
 })
-
-// router.put('/:postId', function(req, res, send) {
-            //     Post.update(req.body, {
-            //             where: {
-            //                 id: req.params.postId
-            //             }
-            //         })
-            //         .then(function(post) {
-            //             res.send(post)
-            //         })
-            //         .catch(next)
-            // })
-
-            // router.delete('/:postId', function(req, res, next) {
-            //     Post.destroy({
-            //             where: {
-            //                 id: req.params.id
-            //             }
-            //         })
-            //         .then(function() {
-            //             res.send(204)
-            //         })
-
-//         .catch(next)
-// })

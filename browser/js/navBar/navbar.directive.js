@@ -1,4 +1,3 @@
-
 app.directive('navbar', function($rootScope, $state) {
 
 

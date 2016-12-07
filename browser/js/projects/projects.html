@@ -1,8 +1,6 @@
 <div ng-repeat="project in projects">
     <div class='row well'>
-    <h2><a ui-sref-active="active" ui-sref="project({projectId: project.id})">{{project.label}}</a><h2>
+        <h2><a ui-sref-active="active" ui-sref="project({projectId: project.id})">{{project.label}}</a><h2>
         <h3>{{project.content}}</h3>
     </div>
 </div>
-
-

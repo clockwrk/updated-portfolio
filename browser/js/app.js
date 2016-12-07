@@ -1,21 +1,7 @@
+var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'ngAnimate', 'xeditable']);
 
-var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'ngAnimate']);
+app.run(function(editableOptions) {
 
-// app.config([
-//   '$stateProvider',
-//   '$urlRouterProvider',
-//   function($stateProvider, $urlRouterProvider){
-//     $urlRouterProvider.otherwise('/');
-
-//     // $stateProvider.state('home', {
-//     //   url: '/',
-//     //   templateUrl: 'index.html'
-//     // }).state('products', {
-//     //   url: '/products',
-//     //   templateUrl: 'products.html'
-//     // }).state('services', {
-//     //   url: '/services',
-//     //   templateUrl: 'services.html'
-//     // });
-//   }
-// ]);
+    console.log("HI!")
+    editableOptions.theme = 'bs3'; // bootstrap3 theme. Can be also 'bs2', 'default'
+});

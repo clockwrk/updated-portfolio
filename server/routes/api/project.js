@@ -7,7 +7,6 @@ module.exports = router;
 router.get('/', function(req, res, next) {
 
     console.log('Hit the project route')
-
     console.log(Project)
 
     Project.findAll({})
@@ -27,35 +26,37 @@ router.get('/:projectID', function(req, res, next) {
 })
 
 router.post('/', function(req, res, next) {
+    console.log("posting project", req.body)
 
-    Project.create({ content: req.body.content })
+    Project.create(req.body)
         .then(function() {
+
+
             res.status(201)
         })
         .catch(next)
 })
 
 router.put('/:projectID', function(req, res, send) {
-            Project.update(req.body, {
-                    where: {
-                        id: req.params.projectID
-                    }
-                })
-                .then(function(project) {
-                    res.send(project)
-                })
-                .catch(next)
-            })
-            
-router.delete('/:projectID', function(req, res, next){
-		Project.destroy({
-			where: {
-				id: req.params.id
-			}
-		})
-		.then(function(){
-			res.send(204)
-		})
-		.catch(next)
+    Project.update(req.body, {
+            where: {
+                id: req.params.projectID
+            }
+        })
+        .then(function(project) {
+            res.send(project)
+        })
+        .catch(next)
 })
 
+router.delete('/:projectID', function(req, res, next) {
+    Project.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(function() {
+            res.send(204)
+        })
+        .catch(next)
+})

@@ -6,7 +6,7 @@ app.factory('feedBackFactory', function($http) {
     feedBackFactory.getPosts = function() {
         return $http.get('/api/comment')
             .then(function(response) {
-            	console.log('getting comments')
+                console.log('getting comments')
                 return response.data
             })
             .catch()

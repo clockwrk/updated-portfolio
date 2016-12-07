@@ -1,4 +1,3 @@
-
 app.directive('post', function($rootScope, $state) {
     console.log('post directive')
 

@@ -2,19 +2,19 @@ var db = require("./_db.js");
 var Sequelize = require('sequelize');
 
 module.exports = db.define('Project', {
+    deploy: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    description: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    gitHub: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
     name: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-    gitHubSite: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-    deploySite: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-    content: {
         type: Sequelize.STRING,
         allowNull: false
     }
