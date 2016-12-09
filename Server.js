@@ -5,6 +5,8 @@ let path = require('path');
 let morgan = require('morgan');
 let db = require('./server/db/models/index.js');
 let bodyParser = require('body-parser')
+let dotenv = require('dotenv');
+dotenv.load();
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
