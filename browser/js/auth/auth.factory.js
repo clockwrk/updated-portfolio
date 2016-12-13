@@ -1,3 +1,5 @@
+
+
 app.factory('authFactory', function($http){
 
 	var admin;
@@ -6,11 +8,18 @@ app.factory('authFactory', function($http){
 			return !!admin
 		}, 
 		login: function(loginInfo){
-			 if(loginInfo.name === process.env.USER_NAME && loginInfo.password === process.env.USER_PASSWORD){
-			 	admin = true;
-			 }else{
-			 	return;
-			 }
+				$http.get('/api/authentication/'+loginInfo.name+'/'+loginInfo.password)
+						.then(function(authenticationDecision){
+							if(authenticationDecision.data){
+								admin=true;
+							}
+						}).catch()
+
+			 // if(loginInfo.name === process.env.USER_NAME && loginInfo.password === process.env.USER_PASSWORD){
+			 // 	admin = true;
+			 // }else{
+			 // 	return;
+			 // }
 		}
 	}
 })
