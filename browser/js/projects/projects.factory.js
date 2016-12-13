@@ -24,6 +24,14 @@ app.factory('projectFactory', function($http) {
                     return response.data
                 })
                 .catch()
+        },
+        updateProject: function(updatedProject) {
+            return $http.put('api/project', updatedProject)
+                .then(function(response) {
+                    console.log('Updated')
+                    return response.data
+                })
+                .catch()
         }
     }
 

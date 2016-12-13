@@ -1,11 +1,12 @@
-let express = require('express');
-let app = express();
-let router = express.Router();
-let path = require('path');
-let morgan = require('morgan');
-let db = require('./server/db/models/index.js');
-let bodyParser = require('body-parser')
-let dotenv = require('dotenv');
+var express = require('express')
+var app = express()
+var router = express.Router()
+var path = require('path')
+var morgan = require('morgan')
+var db = require('./server/db/models/index.js')
+var bodyParser = require('body-parser')
+var chalk = require(chalk)
+var dotenv = require('dotenv')
 dotenv.load();
 
 app.use(bodyParser.urlencoded({ extended: false }))

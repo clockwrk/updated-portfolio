@@ -4,3 +4,9 @@ app.config(function($stateProvider) {
         templateUrl: '/js/home/home.html'
     })
 })
+
+
+// $urlRouterProvider.otherwise(function($injector) {
+//     var $state = $injector.get('$state');
+//     $state.go('stateA');
+// });`
