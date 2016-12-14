@@ -5,7 +5,7 @@ var path = require('path')
 var morgan = require('morgan')
 var db = require('./server/db/models/index.js')
 var bodyParser = require('body-parser')
-var chalk = require(chalk)
+var chalk = require('chalk')
 var dotenv = require('dotenv')
 dotenv.load();
 

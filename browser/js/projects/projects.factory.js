@@ -12,6 +12,8 @@ app.factory('projectFactory', function($http) {
         getSingleProject: function(projectID) {
             return $http.get('/api/project/' + projectID)
                 .then(function(response) {
+
+                    console.log(response.data)
                     return response.data
                 })
                 .catch()

@@ -14,10 +14,6 @@ app.config(function($stateProvider) {
                 return projectFactory.getSingleProject($stateParams.projectId)
             }
         }
-        // resolve: {
-        //   theAlbum: function (AlbumFactory, $stateParams) {
-        //     return AlbumFactory.fetchById($stateParams.albumId);
-        //   }
     });
 
 

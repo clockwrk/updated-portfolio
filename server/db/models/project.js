@@ -18,4 +18,10 @@ module.exports = db.define('Project', {
         type: Sequelize.STRING,
         allowNull: false
     }
+}, {
+    instanceMethods: {
+        snippet: function() {
+            return this.description.splice(0, 30) + '...'
+        }
+    }
 })

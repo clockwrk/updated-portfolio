@@ -26,12 +26,11 @@ router.get('/:projectID', function(req, res, next) {
 })
 
 router.post('/', function(req, res, next) {
+    
     console.log("posting project", req.body)
 
     Project.create(req.body)
         .then(function() {
-
-
             res.status(201)
         })
         .catch(next)
