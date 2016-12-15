@@ -13,7 +13,7 @@ app.factory('projectFactory', function($http) {
             return $http.get('/api/project/' + projectID)
                 .then(function(response) {
 
-                    console.log(response.data)
+                    console.log('Getting project ',response.data)
                     return response.data
                 })
                 .catch()

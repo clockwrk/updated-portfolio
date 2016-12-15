@@ -1,6 +1,10 @@
-<div ng-repeat="project in projects">
-    <div class='well '>
-        <h2><a ui-sref-active="active" ui-sref="project({projectId: project.id})">{{project.label}}</a><h2>
-        <h3>{{project.content}}</h3>
-    </div>
-</div>
+
+<!--         <h2><a ui-sref-active="active" ui-sref="projects/"+{{project.id}}>{{project.name}}</a><h2>
+        <h4><a>{{project.id}}</a></h4>
+        <h4><a>{{project.gitHub}}</a></h4>
+        <h4><a>{{project.deploy}}</a></h4>
+        <h3>{{project.snippet}}</h3> -->
+<!--         <h4>{{project}}</h4> -->
+        <project-tile  ng-repeat="project in projects" project="project"></project-tile>
+
+

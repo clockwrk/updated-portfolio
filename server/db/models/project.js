@@ -7,7 +7,7 @@ module.exports = db.define('Project', {
         allowNull: false
     },
     description: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         allowNull: false
     },
     gitHub: {
@@ -19,9 +19,12 @@ module.exports = db.define('Project', {
         allowNull: false
     }
 }, {
-    instanceMethods: {
+    getterMethods: {
         snippet: function() {
-            return this.description.splice(0, 30) + '...'
+            return this.description
+                .split("")
+                .splice(0, 100)
+                .join('') + "..."
         }
     }
 })

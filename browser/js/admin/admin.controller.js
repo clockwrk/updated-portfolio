@@ -5,7 +5,6 @@ app.controller('adminController', function($scope, adminFactory, allProjects) {
         console.log('submitting project', project)
         adminFactory.postProject(project)
         $scope.project = null;
-
     }
 
     $scope.allProjects = allProjects||[{id:0,name:'empty', deploy:'empty', gitHub:"empty"}]

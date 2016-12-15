@@ -7,10 +7,10 @@ module.exports = router;
 router.get('/', function(req, res, next) {
 
     console.log('Hit the project route')
-    console.log(Project)
 
     Project.findAll({})
         .then(function(projects) {
+            console.log('projects found',projects)
             res.send(projects)
         })
         .catch(next);
