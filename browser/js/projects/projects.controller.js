@@ -13,7 +13,9 @@ app.controller('projectController', function($scope, allProjects) {
 //         { id: 3, state: "Marque", content: "This was a e-commerce site simulating selling concert tickets. I worked mostly on the Artist feature from the front-end to the back-end. I also implemented user authentication and authorization", label: "Marque" }
 //     ]
 
-app.controller('singleProjectController', function($scope, projectFactory, $stateParams) {
-    // $scope.currentProject = currentProject;
-    // console.log($stateParams)
+app.controller('singleProjectController', function($scope, projectFactory,currentProject) {
+
+	console.log('LOADED SINGLE PROJECT CONTROLLER')
+    $scope.currentProject = currentProject;
+    console.log('CURRENT PROJECT',$scope.currentProject)
 })
