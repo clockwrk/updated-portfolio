@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 
     Project.findAll({})
         .then(function(projects) {
-            console.log('projects found',projects)
+            console.log('projects found', projects)
             res.send(projects)
         })
         .catch(next);
@@ -26,12 +26,14 @@ router.get('/:projectID', function(req, res, next) {
 })
 
 router.post('/', function(req, res, next) {
-    
+
     console.log("posting project", req.body)
 
     Project.create(req.body)
-        .then(function() {
-            res.status(201)
+        .then(function(newPost) {
+
+            console.log(newPost)
+            res.status(newPost)
         })
         .catch(next)
 })

@@ -7,5 +7,5 @@ var Post = require('./post')
 var Reply = require('./reply')
 var User = require('./user')
 
-Reply.belongsTo(Post, { foreignKey: 'post_id' })
-Post.hasMany(Reply, { foreignKey: 'post_id' })
+Reply.belongsTo(Post)
+Post.hasMany(Reply)

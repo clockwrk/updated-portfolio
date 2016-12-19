@@ -17,7 +17,7 @@
         <div class="form-group">
             <label for="message" class="col-sm-2 control-label">Message</label>
             <div class="col-sm-10">
-                <textarea class="form-control" rows="4" name="message" ng-model="user.messge"></textarea>
+                <textarea class="form-control" rows="4" name="message" ng-model="user.message"></textarea>
             </div>
         </div>
         <div class="form-group">
@@ -42,6 +42,12 @@
     </form>
     commentd
     <div ng-repeat="post in posts">
-        comment {{post.id}}
+        <div class="well">
+        <div class="well">
+            <h5 align="left">{{post.name}} commented on {{post.createdAt}}</h5>
+            <h5 align="left">{{post.message}}</h5>
+        </div>
+            <input class="form-control" id="reply" name="reply" ng-model="reply" placeholder="Reply to this comment here">
+        </div>
     </div>
 </div>

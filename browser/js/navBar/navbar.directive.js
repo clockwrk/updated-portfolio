@@ -1,6 +1,4 @@
 app.directive('navbar', function($rootScope, $state, authFactory) {
-
-
     return {
         restrict: 'E',
         scope: {},

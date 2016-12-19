@@ -7,12 +7,12 @@ app.controller('adminController', function($scope, adminFactory, allProjects) {
         $scope.project = null;
     }
 
-    $scope.allProjects = allProjects||[{id:0,name:'empty', deploy:'empty', gitHub:"empty"}]
+    $scope.allProjects = allProjects || [{ id: 0, name: 'empty', deploy: 'empty', gitHub: "empty" }]
 
     console.log('These are all the projects', allProjects)
     $scope.data = {
         availableProjects: $scope.allProjects,
-        selectedProject: { id:0, name:'empty', deploy:'empty', gitHub:'empty', description:"empty"}
+        selectedProject: { id: 0, name: 'empty', deploy: 'empty', gitHub: 'empty', description: "empty" }
     }
 
     $scope.selectedprojectChanged = function() {

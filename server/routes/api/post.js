@@ -27,12 +27,13 @@ router.get('/:postID', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
 
-    console.log('Hit post route')
-    console(req.body)
+    console.log('Hit post route', req.body)
 
-    Post.create({ content: req.body.content })
-        .then(function() {
-            res.status(201)
+    Post.create(req.body)
+        .then(function(createdPost) {
+
+            console.log("Returning ", createdPost.dataValues)
+            res.send(createdPost.dataValues)
         })
         .catch(next)
 })

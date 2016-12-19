@@ -1,13 +1,19 @@
-app.controller('contactController', function($scope, feedBackFactory) {
-
-
+app.controller('contactController', function($scope, posts, feedBackFactory) {
     $scope.posts = posts;
     $scope.submitForm = function(data) {
         console.log('Submitting', data)
         feedBackFactory.postComment(data)
-        console.log($scope.userForm)
+            .then(function(newPost) {
+
+                console.log(newPost)
+                $scope.posts[$scope.posts.length] = newPost
+                console.log($scope.posts)
+            })
+            .catch()
+
         $scope.user = null
         $scope.userForm.$setPristine(true)
+
     }
 
     $scope.clear = function() {
