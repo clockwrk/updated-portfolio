@@ -1,5 +1,12 @@
 app.controller('contactController', function($scope, posts, feedBackFactory) {
     $scope.posts = posts;
+    $scope.postReply = function(postId, content) {
+
+        console.log(postId, content)
+        var replyInfo = { postId, content }
+        feedBackFactory.postReplY(replyInfo)
+    }
+
     $scope.submitForm = function(data) {
         console.log('Submitting', data)
         feedBackFactory.postComment(data)
