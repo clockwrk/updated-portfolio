@@ -6,4 +6,6 @@ module.exports = db.define('Reply', {
         type: Sequelize.STRING,
         allowNull: false
     }
+}, {
+    freezeTableName: true
 })

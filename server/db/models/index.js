@@ -9,3 +9,5 @@ var User = require('./user')
 
 Reply.belongsTo(Post)
 Post.hasMany(Reply)
+
+db.sync();

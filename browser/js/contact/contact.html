@@ -52,8 +52,7 @@
                     <button class="btn btn-primary" type="button" ng-click="postReply({postId:post.id}, {content:reply})">Reply</button>
                 </span>
                 <input type="text" class="form-control white-blue-input" id="reply" ng-model="reply" placeholder="respond to comment" >{{reply}}
-
-
+                <replies postId="{{post.id}}" ></replies>
             </div>
         </div>
     </div>

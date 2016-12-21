@@ -1,17 +1,14 @@
-app.directive('repliy', function($rootScope, $state) {
+app.directive('replies', function($rootScope) {
     console.log('post directive')
 
     return {
         restrict: 'E',
-        scope: {},
-        templateUrl: 'js/contact/template/replyView.html',
-        link: function(scope) {
-            scope.links = [
-                { label: 'Home', state: 'home' },
-                { label: 'Projects', state: 'projects' },
-                { label: 'About Me', state: 'about' },
-                { label: 'Contact Me', state: 'contact' }
-            ]
-        }
+        scope: {
+            projectId: "="
+        },
+        templateUrl: 'js/contact/template/replyView.html'
+        // link: function(scope) {
+        //     scope.links = 'blank'
+        // }
     }
 })

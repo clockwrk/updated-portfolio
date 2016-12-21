@@ -1,7 +1,7 @@
 var express = require('express')
 var router = express.Router();
 var Reply = require('../../db/models/reply')
-var Post = require('../../db/models/post')
+var Post = require('../../db/models')
 var Promise = require('bluebird')
 module.exports = router;
 
@@ -24,22 +24,12 @@ router.post('/', function(req, res, next) {
 
     Reply.create(req.body)
         .then(function(reply) {
-            console.log(Object.getOwnPropertyNames(reply.dataValues))
-
-            return Post.findById(req.body.post_id)
-                .then(function(foundPost) {
-                    console.log(Object.getOwnPropertyNames(foundPost.dataValues))
-
-
-                    foundPost.setReply(reply)
-                        .then(function(updatedReply) {
-                            return res.send(updatedReply)
-                        }).catch()
-
-                }).catch()
-
-
-            res.send(reply)
+            console.log(req.body.post_id)
+            return reply.setPost(req.body.post_id)
+        })
+        .then(function(updatedReply) {
+            console.log('arrived here')
+            res.send(updatedReply)
         })
         .catch(next)
 })

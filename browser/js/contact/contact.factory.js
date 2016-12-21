@@ -28,12 +28,7 @@ app.factory('feedBackFactory', function($http) {
             .catch()
     }
     feedBackFactory.postReplY = function(message) {
-
-
         console.log('running post reply', message)
-
-
-
         return $http.post('/api/reply/', {post_id:parseInt(message.postId.postId) ,content:message.content.content})
             .then(function(postedComment){
                 return postedComment.data

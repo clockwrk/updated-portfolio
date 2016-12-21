@@ -19,6 +19,8 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
+
+
 body {
     overflow-x: hidden;
     background-image: url("blue_triangles.png");
@@ -93,19 +95,33 @@ body {
 
 .sidebar-nav li a {
     display: block;
+    position:relative;
     text-decoration: none;
     color: #f5f5f5;
 }
 
-.sidebar-nav li a:hover {
+.sidebar-nav li a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  border-bottom: 2px solid white;
+  transition: 0.4s;
+}
+
+
+.sidebar-nav li a:hover:after {
     text-decoration: none;
     color: #111;
     background: rgba(255, 255, 255, 0.4);
+    width: 100%;
 }
 
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus {
     text-decoration: none;
+    
 }
 
 .sidebar-nav > .sidebar-brand {
@@ -246,6 +262,15 @@ a:hover {
     background-color: rgba(0, 34, 68, 0.7);
     color: #f5f5f5;
 }
+
+textarea, input, select {
+   display: inline-block;
+}
+
+
+
+
+
 
 @media(min-width:768px) {
     #wrapper {
