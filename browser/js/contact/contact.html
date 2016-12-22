@@ -47,13 +47,16 @@
                 <h5 align="left">{{post.name | uppercase}} commented on {{post.createdAt | date}}</h5>
                 <h5 align="left">" {{post.message}} "</h5>
             </div>
+            <replies post="post" ></replies>
+
             <div class="input-group">
                 <span class="input-group-btn">
-                    <button class="btn btn-primary" type="button" ng-click="postReply({postId:post.id}, {content:reply})">Reply</button>
+                    <button class="btn btn-primary white-blue-input" type="button" ng-click="postReply({postId:post.id}, {content:reply})">Reply</button>
                 </span>
                 <input type="text" class="form-control white-blue-input" id="reply" ng-model="reply" placeholder="respond to comment" >{{reply}}
-                <replies postId="{{post.id}}" ></replies>
+                
             </div>
+            
         </div>
     </div>
 </div>

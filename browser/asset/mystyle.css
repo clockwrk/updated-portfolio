@@ -19,8 +19,6 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
-
-
 body {
     overflow-x: hidden;
     background-image: url("blue_triangles.png");
@@ -29,6 +27,10 @@ body {
     background-position: center;
     color: #f5f5f5;
     text-align: center
+}
+
+a {
+    color: #B3E5FC;
 }
 
 
@@ -95,21 +97,20 @@ body {
 
 .sidebar-nav li a {
     display: block;
-    position:relative;
+    position: relative;
     text-decoration: none;
     color: #f5f5f5;
 }
 
 .sidebar-nav li a:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  border-bottom: 2px solid white;
-  transition: 0.4s;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    border-bottom: 2px solid white;
+    transition: 0.4s;
 }
-
 
 .sidebar-nav li a:hover:after {
     text-decoration: none;
@@ -121,7 +122,6 @@ body {
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus {
     text-decoration: none;
-    
 }
 
 .sidebar-nav > .sidebar-brand {
@@ -251,7 +251,7 @@ body {
 }
 
 .well {
-    background-color: rgba(0, 34, 68, 0.7);
+    background-color: rgba(0, 34, 68, 0.5);
 }
 
 a:hover {
@@ -261,16 +261,67 @@ a:hover {
 .jumbotron {
     background-color: rgba(0, 34, 68, 0.7);
     color: #f5f5f5;
+    border: 1px solid #e3e3e3;
 }
 
-textarea, input, select {
-   display: inline-block;
+textarea,
+input,
+select {
+    display: inline-block;
 }
 
+.bg-1 {
+    background-color: rgba(83, 190, 209, 0.72);
+    /* Green */
+    opacity: .2 z-index: 1000;
+    color: #ffffff;
+    overflow-y: auto;
+        border: 1px solid #e3e3e3;
+         border-bottom: 0px;
+}
 
+.bg-2 {
+    background-color: rgba(61, 173, 209, 0.72);
+    /* Dark Blue */
+    color: #ffffff;
+        border: 1px solid #e3e3e3;
+         border-bottom: 0px;
+          border-top: 0px;
+}
 
+.bg-3 {
+    background-color: rgba(57, 159, 206, 0.72);
+    /* White */
+    color: #ffffff;
+        border: 1px solid #e3e3e3;
+        border-top: 0px;
+}
 
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
 
+.sliding-middle-out {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.sliding-middle-out:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+.sliding-middle-out:hover:after {
+    width: 100%;
+    background: white;
+}
 
 @media(min-width:768px) {
     #wrapper {

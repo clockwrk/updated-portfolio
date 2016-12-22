@@ -1,5 +1,10 @@
 app.controller('contactController', function($scope, posts, feedBackFactory) {
     $scope.posts = posts;
+
+    $scope.getReplies = feedBackFactory.getReplies
+
+    console.log($scope)
+
     $scope.postReply = function(postId, content) {
 
         console.log(postId, content)
