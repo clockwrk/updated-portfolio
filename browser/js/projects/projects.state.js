@@ -3,9 +3,9 @@ app.config(function($stateProvider) {
         url: '/projects',
         templateUrl: '/js/projects/projects.html',
         controller: 'projectController',
+        authenticate: false,
         resolve: {
             allProjects: function(projectFactory) {
-                console.log('Getting all projects')
                 return projectFactory.getAllProjects();
             }
         }
@@ -15,12 +15,11 @@ app.config(function($stateProvider) {
         url: '/projects/:id',
         templateUrl: '/js/projects/singleProject/singleProject.html',
         controller: 'singleProjectController',
+        authenticate: false,
         resolve: {
             currentProject: function(projectFactory, $stateParams) {
                 return projectFactory.getSingleProject($stateParams.id)
             }
         }
     });
-
-
 })

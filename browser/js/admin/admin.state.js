@@ -3,9 +3,9 @@ app.config(function($stateProvider) {
         url: '/admin',
         templateUrl: '/js/admin/admin.html',
         controller: 'adminController',
+        authenticate: true,
         resolve: {
             allProjects: function(adminFactory) {
-                console.log("Attemping to get all allProjects")
                 return adminFactory.getAllProjects();
             }
         }

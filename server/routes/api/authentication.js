@@ -1,10 +1,9 @@
 var express = require('express')
 var router = express.Router()
 var User = require('../../db/models/user.js')
-
 module.exports = router
-router.get('/:userName/:password', function(req, res, next) {
 
+router.get('/:userName/:password', function(req, res, next) {
     User.findOne({
             where: { userName: req.params.userName }
         })
@@ -14,6 +13,5 @@ router.get('/:userName/:password', function(req, res, next) {
             } else {
                 res.send(user)
             }
-
         }).catch()
 })

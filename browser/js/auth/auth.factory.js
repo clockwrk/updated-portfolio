@@ -1,24 +1,21 @@
-app.factory('authFactory', function($http) {
-
-    var admin;
+app.factory('authFactory', function($http, $state, $rootScope) {
     return {
         isAdmin: function() {
-            return !!admin
+            return !!$rootScope.admin
         },
         login: function(loginInfo) {
-            $http.get('/api/authentication/' + loginInfo.name + '/' + loginInfo.password)
+            return $http.get('/api/authentication/' + loginInfo.name + '/' + loginInfo.password)
                 .then(function(authenticationDecision) {
-                    if (authenticationDecision.data) {
-                        admin = true;
+                    if (!authenticationDecision.data) {
+                        $rootScope.admin = false;
+                    } else {
+                        $rootScope.admin = true
                     }
+                    return authenticationDecision
                 }).catch()
-
-
-            // if(loginInfo.name === process.env.USER_NAME && loginInfo.password === process.env.USER_PASSWORD){
-            // 	admin = true;
-            // }else{
-            // 	return;
-            // }
+        },
+        logOut: function() {
+            $rootScope.admin = null;
         }
     }
 })

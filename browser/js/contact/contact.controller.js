@@ -1,7 +1,8 @@
 app.controller('contactController', function($scope, posts, feedBackFactory) {
+
     $scope.posts = posts;
 
-    $scope.getReplies = feedBackFactory.getReplies
+    $scope.getReplies = feedBackFactory.getReplies;
 
     console.log($scope)
 

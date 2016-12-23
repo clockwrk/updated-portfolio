@@ -3,6 +3,7 @@ app.config(function($stateProvider) {
         url: '/contact',
         templateUrl: '/js/contact/contact.html',
         controller: 'contactController',
+        authenticate: false,
         resolve: {
             posts: function(feedBackFactory) {
                 console.log('invoking feedBackFactory')

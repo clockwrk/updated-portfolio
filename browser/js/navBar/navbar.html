@@ -1,7 +1,8 @@
 <div>
     <ul class='sidebar-nav'>
         <li class='navlinks' ng-repeat="link in links">
-            <a ng-hide="isAdmin" ui-sref-active="active" ui-sref="{{link.state}}" style="font-family: 'Baskervile'">{{link.label}}</a>
+<!--             <a ng-hide="showLink(link)" ui-sref-active="active" ui-sref="{{link.state}}" style="font-family: 'Baskervile'">{{link.label}}</a> -->
+            <a ng-show="!link.isAdmin" ui-sref-active="active" ui-sref="{{link.state}}" style="font-family: 'Baskervile'">{{link.label}}</a>
         </li>
     </ul>
 </div>

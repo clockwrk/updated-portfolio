@@ -8,9 +8,7 @@ module.exports = router;
 router.get('/:postId', function(req, res, next) {
 
     Reply.findAll({
-            where: {
-                post_id: req.params.postId
-            }
+            where: { post_id: req.params.postId }
         })
         .then(function(repliesBelongingToPost) {
             res.send(repliesBelongingToPost)
@@ -19,16 +17,11 @@ router.get('/:postId', function(req, res, next) {
 })
 
 router.post('/', function(req, res, next) {
-
-    console.log(req.body)
-
     Reply.create(req.body)
         .then(function(reply) {
-            console.log(req.body.post_id)
             return reply.setPost(req.body.post_id)
         })
         .then(function(updatedReply) {
-            console.log('arrived here')
             res.send(updatedReply)
         })
         .catch(next)

@@ -39,11 +39,9 @@ app.use(function(err, req, res, next) {
 
 db.sync()
     .then(function() {
-
         app.listen(3000, function() {
             console.log('Live at Port 3000');
         });
-
     })
     .catch(function(err) {
         console.error(chalk.red(err.stack));

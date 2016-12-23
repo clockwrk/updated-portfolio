@@ -1,15 +1,12 @@
-app.controller('adminController', function($scope, adminFactory, allProjects) {
+app.controller('adminController', function($scope,$state, adminFactory, allProjects, authFactory) {
 
     $scope.submitProject = function(project) {
-
-        console.log('submitting project', project)
         adminFactory.postProject(project)
         $scope.project = null;
     }
 
     $scope.allProjects = allProjects || [{ id: 0, name: 'empty', deploy: 'empty', gitHub: "empty" }]
 
-    console.log('These are all the projects', allProjects)
     $scope.data = {
         availableProjects: $scope.allProjects,
         selectedProject: { id: 0, name: 'empty', deploy: 'empty', gitHub: 'empty', description: "empty" }
@@ -18,14 +15,9 @@ app.controller('adminController', function($scope, adminFactory, allProjects) {
     $scope.selectedprojectChanged = function() {
         $scope.currentProject = $scope.selectedItem;
     }
+
+    $scope.logOut =  function(){
+        authFactory.logOut()
+        $state.go('home')
+    }
 })
-
-
-
-// app.controller('singleProjectController', function($scope, projectFactory, $stateParams){
-
-//  // $scope.currentProject = currentProject;
-
-//  // console.log($stateParams)
-
-// })
