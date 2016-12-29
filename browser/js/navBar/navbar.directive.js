@@ -17,8 +17,8 @@ app.directive('navbar', function($rootScope, $state, authFactory) {
                 { label: 'Projects', state: 'projects' },
                 { label: 'About Me', state: 'about' },
                 // { label: 'Contact Me', state: 'contact' },
-                { label: 'Admin ', state: 'admin', isAdmin: !$rootScope.admin },
-                { label: 'Administrator', state: 'login', isAdmin: $rootScope.admin }
+                // { label: 'Admin ', state: 'admin', isAdmin: !$rootScope.admin },
+                // { label: 'Administrator', state: 'login', isAdmin: $rootScope.admin }
             ]
         }
     }

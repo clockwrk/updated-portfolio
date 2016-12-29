@@ -14,12 +14,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link href="/angular-xeditable-0.5.0/css/xeditable.css" rel="stylesheet" defer>
     <script src="/masonry-layout/dist/masonry.pkgd.min.js"></script>
+    <script src="/jquery/dist/jquery.min.js" defer ></script>
+    <script src="/chart.js/dist/Chart.min.js" defer></script>
+    <script src="/angular-chart.js/dist/angular-chart.min.js" defer></script>
     <script src='/js/app.js' defer></script>
     <script src="/js/navBar/navbar.directive.js" defer></script>
     <script src="/js/home/home.state.js" defer></script>
-    <script src="/js/home/home.html" defer></script>
+    <!--     <script src="/js/home/home.html" defer></script> -->
+    <script src="/js/home/home.controller.js" defer></script>
     <script src="/js/about/about.state.js" defer></script>
-    <script src="/js/about/about.html" defer></script>
+<!--     <script src="/js/about/about.html" defer></script> -->
     <script src="/js/contact/contact.state.js" defer></script>
     <script src="/js/contact/contact.factory.js" defer></script>
     <script src="/js/contact/contact.controller.js" defer></script>
@@ -38,12 +42,12 @@
     <script src="/angular-xeditable-0.5.0/js/xeditable.js" defer></script>
 </head>
 
-<body class="container" style="background-color:#555555;     box-shadow:  4px 4px 6px rgba(0,0,0,0.5);">
+<body id="top-image" class="container" style="background-color:#555555;     text-shadow:  4px 4px 6px rgba(0,0,0,0.5);">
     <div id="wrapper">
         <div id="sidebar-wrapper" class="shadow">
             <div class="row">
                 <img class="me" src="/asset/IMG_0038-min.jpeg">
-<!--                 <h4 class="me_Footer">Jose Renteria </br> Fullstack Web Developer</h4> -->
+                <!--                 <h4 class="me_Footer">Jose Renteria </br> Fullstack Web Developer</h4> -->
                 <div class="social">
                     <a href="https://twitter.com/clockwrkr"><i id="twitter" class="icon-twitter"></i></a>
                     <a href="https://github.com/clockwrk"><i id="github" class="icon-github"></i></a>

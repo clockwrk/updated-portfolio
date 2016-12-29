@@ -1,4 +1,4 @@
-app.controller('adminController', function($scope,$state, adminFactory, allProjects, authFactory) {
+app.controller('adminController', ($scope, $state, adminFactory, allProjects, authFactory) => {
 
     $scope.submitProject = function(project) {
         adminFactory.postProject(project)
@@ -16,7 +16,7 @@ app.controller('adminController', function($scope,$state, adminFactory, allProje
         $scope.currentProject = $scope.selectedItem;
     }
 
-    $scope.logOut =  function(){
+    $scope.logOut = function() {
         authFactory.logOut()
         $state.go('home')
     }

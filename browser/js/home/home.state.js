@@ -1,7 +1,11 @@
 app.config(function($stateProvider) {
+
+// console.log('Here')
+	
     $stateProvider.state('home', {
         url: '/',
         templateUrl: '/js/home/home.html',
+        controller:'BarCtrl',
         authenticate: false
     })
 })

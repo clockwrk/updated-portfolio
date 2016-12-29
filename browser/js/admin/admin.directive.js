@@ -1,4 +1,4 @@
-app.directive('projectEdit', function(projectFactory) {
+app.directive('projectEdit', projectFactory => {
     return {
         restrict: 'E',
         scope: {

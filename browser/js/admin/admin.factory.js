@@ -1,16 +1,18 @@
-app.factory('adminFactory', function($http) {
+app.factory('adminFactory', $http => {
     return {
-        postProject: function(project) {
+        postProject: project => {
             return $http.post('/api/project', project)
-                .then(function(response) {
-                    return response.data
-                })
+                .then(
+                    response => {
+                        return response.data
+                    })
                 .catch()
         },
-        getAllProjects: function() {
+        getAllProjects: () => {
             return $http.get('/api/project')
-                .then(function(response) {
-                    return response.data
+                .then(
+                    response => {
+                            return response.data
                 })
                 .catch()
         }
