@@ -13,10 +13,8 @@ app.controller('contactController', ($scope, posts, feedBackFactory) => {
                     $scope.posts[$scope.posts.length] = newPost
                 })
             .catch()
-
         $scope.user = null
         $scope.userForm.$setPristine(true)
-
     }
 
     $scope.clear = function() {

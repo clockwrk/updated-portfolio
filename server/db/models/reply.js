@@ -1,7 +1,7 @@
 var db = require("./_db.js");
 var Sequelize = require('sequelize');
 
-module.exports = db.define('Reply', {
+module.exports = db.define('reply', {
     content: {
         type: Sequelize.STRING,
         allowNull: false
@@ -9,3 +9,4 @@ module.exports = db.define('Reply', {
 }, {
     freezeTableName: true
 })
+console.log('Loading reply')

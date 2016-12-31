@@ -23,3 +23,4 @@ module.exports = db.define('post', {
         defaultValue: 0
     }
 })
+console.log('Loading post')

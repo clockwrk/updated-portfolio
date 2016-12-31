@@ -1,4 +1,4 @@
-<div class="grid well shadow" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
+<div class="grid well shadow" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }' ui-sref="singleProject({id:project.id})">
     <a ui-sref="singleProject({id:project.id})"><h2 id="project"  class="sliding-middle-out" >{{ project.name }}</h2></a>
     <p>{{ project.snippet }}</p>
 </div>

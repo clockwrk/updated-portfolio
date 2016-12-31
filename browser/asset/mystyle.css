@@ -1,8 +1,7 @@
 @font-face {
     font-family: 'Ailerons';
-    src: url('Ailerons/Ailerons-Typeface.otf');  
+    src: url('Ailerons/Ailerons-Typeface.otf');
 }
-
 
 body {
     overflow-x: hidden;
@@ -18,17 +17,24 @@ a {
     color: #B3E5FC;
 }
 
-h1, .h1, h2, .h2, h3, .h3 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
     margin-top: 5px;
     margin-bottom: 18px;
 }
+
+
 /* Toggle Styles */
 
 #left {
     float: left;
     width: 33%;
-
 }
+
 #middle {
     float: left;
     width: 33%;
@@ -43,10 +49,8 @@ h1, .h1, h2, .h2, h3, .h3 {
     width: 70%;
     margin: 0 auto;
     font-size: 1.4em;
-        font-family: 'Lato',sans-serif;
+    font-family: 'Lato', sans-serif;
     -webkit-font-smoothing: antialiased;
-
-    
 }
 
 #wrapper {
@@ -199,7 +203,7 @@ h1, .h1, h2, .h2, h3, .h3 {
 .me {
     text-align: center;
     color: #f5f5f5;
-/*    font-family: 'Baskerville'*/
+    /*    font-family: 'Baskerville'*/
 }
 
 .social {
@@ -318,7 +322,7 @@ select {
     color: #ffffff;
     border: 1px solid #e3e3e3;
     border-top: 0px;
-    font-family: 'Lato',sans-serif;
+    font-family: 'Lato', sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -398,15 +402,33 @@ select {
 
 .home-page-title {
     padding-bottom: 25px;
-        font-family: 'Ubuntu', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 
-#my-intro{
-    font-family: 'Lato',sans-serif;
+#my-intro {
+    font-family: 'Lato', sans-serif;
     -webkit-font-smoothing: antialiased;
     margin-left: 10%;
     margin-right: 10%;
+}
+
+.technology li {
+    display: inline-block;
+    padding: 10px;
+    background-color: rgba(0, 34, 68, 0.5);
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    margin: 10px 5px 0 0;
+}
+
+.back {
+    display: inline-block;
+    padding: 10px;
+    background-color: rgba(0, 34, 68, 0.5);
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    margin: 10px 5px 0 0;
 }
 
 @-webkit-keyframes fadeinleft {

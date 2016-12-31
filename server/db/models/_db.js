@@ -3,3 +3,5 @@ var db = new Sequelize('postgres://localhost:5432/portfolio', {
     logging: false
 });
 module.exports = db;
+
+console.log('Loading db')

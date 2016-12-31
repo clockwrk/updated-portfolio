@@ -6,8 +6,9 @@ var marked = require('marked')
 var Post = require('./post')
 var Reply = require('./reply')
 var User = require('./user')
+var Project = require('./project')
 
 Reply.belongsTo(Post)
 Post.hasMany(Reply)
 
-db.sync();
+console.log('Loading index')

@@ -16,6 +16,8 @@ router.use(morgan(':method :url :status :response-time ms - :res[content-length]
 
 app.use('/api', require('./server/routes/index.js'));
 
+console.log("after database")
+
 router.use(function(req, res, next) {
     console.log('/' + req.method);
     next();
@@ -39,6 +41,8 @@ app.use(function(err, req, res, next) {
 
 db.sync()
     .then(function() {
+
+
         app.listen(3000, function() {
             console.log('Live at Port 3000');
         });

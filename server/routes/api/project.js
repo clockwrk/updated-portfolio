@@ -5,6 +5,8 @@ var Promise = require('bluebird')
 module.exports = router;
 
 router.get('/', function(req, res, next) {
+
+    console.log('HERE')
     Project.findAll({})
         .then(function(projects) {
             res.send(projects)

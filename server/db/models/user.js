@@ -52,3 +52,4 @@ module.exports = db.define('user', {
         }
     }
 })
+console.log('Loading user')
