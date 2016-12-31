@@ -29,5 +29,7 @@
     "sequelize": "^3.27.0",
     "ui-bootstrap": "^0.1.6",
     "ui-router": "^1.0.0-alpha.3"
-  }
+  },    
+  "devDependencies": {
+    }
 }

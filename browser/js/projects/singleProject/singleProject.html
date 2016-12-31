@@ -1,18 +1,16 @@
 <div style='    font-family: "Lato", sans-serif;
     -webkit-font-smoothing: antialiased;'>
-<h1>{{currentProject.name}}</h1>
-<h3 class="row well shadow" style="text-align: left;">Description: {{currentProject.description}}</h3>
-
-<div class="row well shadow technology" style="text-align: left;">
-    <h1 style="float:left;">For this project I used :  </h1>
-    <ul>
-    <li ng-repeat="tech in currentProject.technology">{{tech}}</li>
-    </ul>
+    <h1>{{currentProject.name}}</h1>
+    <h3 class="row well shadow" style="text-align: left;">Description: {{currentProject.description}}</h3>
+    <div class="row well shadow technology" style="text-align: left;">
+        <h1 style="float:left;">For this project I used :  </h1>
+        <ul>
+            <li ng-repeat="tech in currentProject.technology">{{tech}}</li>
+        </ul>
     </div>
     <div class="row well shadow">
-        <h3 style="text-align: left;">Deployed at <a href="{{currentProject.deploy}}">{{currentProject.deploy}}</a></h3>
-<h3 style="text-align: left;"> Code hosted at <a href="{{currentProject.gitHub}}">{{currentProject.gitHub}}</a></h3>
-</div>
-
+        <h3 style="text-align: left;">Deployed at <a  class="sliding-middle-out" href="{{currentProject.deploy}}">{{currentProject.deploy}}</a></h3>
+        <h3 style="text-align: left;"> Code hosted at <a class="sliding-middle-out" href="{{currentProject.gitHub}}">{{currentProject.gitHub}}</a></h3>
+    </div>
 </div>
 <button class="back">Back</button>
