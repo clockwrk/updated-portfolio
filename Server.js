@@ -6,13 +6,16 @@ var morgan = require('morgan')
 var db = require('./server/db/models/index.js')
 var bodyParser = require('body-parser')
 var chalk = require('chalk')
-var dotenv = require('dotenv')
-dotenv.load();
+var env = require(path.join(__dirname, './server/env'));
+// var dotenv = require('dotenv')
+// dotenv.load();
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 router.use(morgan(':method :url :status :response-time ms - :res[content-length]'));
+
+app.set('env', env)
 
 app.use('/api', require('./server/routes/index.js'));
 
@@ -42,8 +45,9 @@ app.use(function(err, req, res, next) {
 db.sync()
     .then(function() {
 
+        var PORT = process.env.PORT || 3000;
 
-        app.listen(3000, function() {
+        app.listen(PORT, function() {
             console.log('Live at Port 3000');
         });
     })
