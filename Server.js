@@ -7,6 +7,7 @@ var db = require('./server/db/models/index.js')
 var bodyParser = require('body-parser')
 var chalk = require('chalk')
 var env = require(path.join(__dirname, './server/env'));
+var pg = require('pg');
 // var dotenv = require('dotenv')
 // dotenv.load();
 
