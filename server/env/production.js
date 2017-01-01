@@ -1,10 +1,10 @@
 
 
-console.log('IN production', process.env.DATABASE_URI)
+console.log('IN production', process.env.DATABASE_URL)
 
 
 module.exports = {
-	DATABASE_URI: process.env.DATABASE_URI,
+	DATABASE_URL: process.env.DATABASE_URL,
 	SESSION_SECRET: process.env.SESSION_SECRET,
 	LOGGING: true,
 	NATIVE: true
