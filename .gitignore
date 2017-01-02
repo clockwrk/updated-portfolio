@@ -3,5 +3,4 @@ node_modules/
 bower_components
 .env
 credentials.js
-seed.js
 temp/
