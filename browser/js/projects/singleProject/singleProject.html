@@ -1,7 +1,11 @@
 <div style='    font-family: "Lato", sans-serif;
     -webkit-font-smoothing: antialiased;'>
     <h1>{{currentProject.name}}</h1>
-    <h3 class="row well shadow" style="text-align: left;">{{currentProject.description}}</h3>
+    <div class="row well shadow" style="text-align: left; display: inline-block;">
+        <img class='project-picture' src="{{currentProject.imageUrl}}">
+        <h3 style="text-align: center;" >{{currentProject.description}}</h3>
+    </div>
+
     <div class="row well shadow technology" style="text-align: left;">
         <h1 style="float:left;">For this project I used :  </h1>
         <ul>

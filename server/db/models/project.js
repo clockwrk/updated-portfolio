@@ -21,6 +21,9 @@ module.exports = db.define('project', {
     techList: {
         type: Sequelize.TEXT,
         allowNull: false
+    },
+    imageUrl: {
+        type: Sequelize.STRING
     }
 }, {
     getterMethods: {

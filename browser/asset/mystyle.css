@@ -242,11 +242,11 @@ a:hover{
 }
 
 .social i#twitter:hover {
-    color: green;
+    color: red;
 }
 
 .social i#github:hover {
-    color: red;
+    color: green;
 }
 
 .social i#linkedin:hover {
@@ -431,6 +431,13 @@ select {
     border-radius: 8px;
     -moz-border-radius: 8px;
     margin: 10px 5px 0 0;
+}
+
+.project-picture {
+    max-width:30%;
+    max-height:30%;
+    float:left;
+ /*   vertical-align: middle;*/
 }
 
 @-webkit-keyframes fadeinleft {
