@@ -200,6 +200,7 @@ a:hover{
     position: relative;
     z-index: 2;
     max-width: 100%;
+    box-shadow: 14px 14px 25px 5px rgba(0, 0, 0, 0.4);
 }
 
 .me {
@@ -437,6 +438,7 @@ select {
     max-width:30%;
     max-height:30%;
     float:left;
+    box-shadow: 14px 14px 25px 5px rgba(0, 0, 0, 0.4);
  /*   vertical-align: middle;*/
 }
 
