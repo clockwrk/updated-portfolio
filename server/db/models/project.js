@@ -26,10 +26,7 @@ module.exports = db.define('project', {
         type: Sequelize.STRING
     },
     videoLink:{
-        type: Sequelize.STRING,
-        validate:{
-            isUrl:true
-        }
+        type: Sequelize.STRING
     }
 }, {
     getterMethods: {
