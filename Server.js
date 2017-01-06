@@ -1,15 +1,13 @@
-var express = require('express')
-var app = express()
-var router = express.Router()
-var path = require('path')
-var morgan = require('morgan')
-var db = require('./server/db/models/index.js')
-var bodyParser = require('body-parser')
-var chalk = require('chalk')
-var env = require(path.join(__dirname, './server/env'));
-var pg = require('pg');
-// var dotenv = require('dotenv')
-// dotenv.load();
+let express = require('express')
+let app = express()
+let router = express.Router()
+let path = require('path')
+let morgan = require('morgan')
+let db = require('./server/db/models/index.js')
+let bodyParser = require('body-parser')
+let chalk = require('chalk')
+let env = require(path.join(__dirname, './server/env'));
+let pg = require('pg');
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
@@ -28,7 +26,6 @@ router.use(function(req, res, next) {
 });
 
 router.get('/', function(req, res) {
-    console.log('IP address', req.ip)
     res.sendFile(__dirname + '/index.html');
 });
 
@@ -45,9 +42,7 @@ app.use(function(err, req, res, next) {
 
 db.sync()
     .then(function() {
-
         var PORT = process.env.PORT || 3000;
-
         app.listen(PORT, function() {
             console.log('Live at Port 3000');
         });
