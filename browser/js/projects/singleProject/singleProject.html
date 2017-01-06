@@ -13,9 +13,9 @@
         </ul>
     </div>
     <div class="row well shadow">
-        <h3 style="text-align: left;">Deployed at <a  class="sliding-middle-out" href="{{currentProject.deploy}}">{{currentProject.deploy}}</a></h3>
-        <h3 style="text-align: left;"> Code hosted at <a class="sliding-middle-out" href="{{currentProject.gitHub}}">{{currentProject.gitHub}}</a></h3>
-        <div ng-show="hasVideoLink()" >
+        <h3 style="text-align: center;">Deployed at <a  class="sliding-middle-out" href="{{currentProject.deploy}}">{{currentProject.deploy}}</a></h3>
+        <h3 style="text-align: center;"> Code hosted at <a class="sliding-middle-out" href="{{currentProject.gitHub}}">{{currentProject.gitHub}}</a></h3>
+        <div style="align-content: center; "ng-show="hasVideoLink()" >
        
             <iframe ng-src="{{trustSrc(movie.src)}}" width="560" height="315" frameborder="0" allowfullscreen></iframe>
         </div>
