@@ -9,15 +9,9 @@ app.controller('singleProjectController', function($scope, projectFactory, curre
         return $sce.trustAsResourceUrl(src);
     }
 
-
-
     $scope.movie = { src: $scope.currentProject.videoLink }
 
     $scope.hasVideoLink = function hasVideoLink() {
         return !!currentProject.videoLink
     }
 })
-
-
-
-
