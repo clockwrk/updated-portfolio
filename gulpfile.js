@@ -67,3 +67,8 @@ gulp.task('buildCSSProduction', function() {
         .pipe(minifyCSS())
         .pipe(gulp.dest('./builds/production/asset'))
 });
+
+gulp.task('copyAssets', function() {
+   gulp.src('./browser/asset/fonts/**/*.{ttf,woff,eof,svg}')
+   .pipe(gulp.dest('./fonts'));
+});
