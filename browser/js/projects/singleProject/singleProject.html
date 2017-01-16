@@ -7,9 +7,9 @@
     overflow: hidden;">{{currentProject.description}}</h3>
     </div>
     <div class="row well shadow technology" style="text-align: left;">
-        <h1 style="float:left;">For this project I used :  </h1>
+        <h3 style="float:center;">The technology I used for this project include  <br> </h3>
         <ul>
-            <li ng-repeat="tech in currentProject.technology">{{tech}}</li>
+            <li ng-repeat="tech in currentProject.technology"><a href="https://en.wikipedia.org/wiki/{{tech}}">{{tech}}</a></li>
         </ul>
     </div>
     <div class="row well shadow">
