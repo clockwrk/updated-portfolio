@@ -1,18 +1,18 @@
 <div style='    font-family: "Lato", sans-serif;
     -webkit-font-smoothing: antialiased;'>
     <h1>{{currentProject.name}}</h1>
-    <div class="row well shadow" style="text-align: left; display: inline-block;">
+    <div class="row well" style="text-align: left; display: inline-block;">
         <img class='project-picture' src="{{currentProject.imageUrl}}">
         <h3 style="text-align: center;    padding: 20px;
     overflow: hidden;">{{currentProject.description}}</h3>
     </div>
-    <div class="row well shadow technology" style="text-align: left;">
+    <div class="row well technology" style="text-align: left;">
         <h3 style="float:center;">The technology I used for this project include  <br> </h3>
         <ul>
             <li ng-repeat="tech in currentProject.technology"><a href="https://en.wikipedia.org/wiki/{{tech}}">{{tech}}</a></li>
         </ul>
     </div>
-    <div class="row well shadow">
+    <div class="row well">
         <h3 style="text-align: center;">Deployed at <a  class="sliding-middle-out" href="{{currentProject.deploy}}">{{currentProject.deploy}}</a></h3>
         <h3 style="text-align: center;"> Code hosted at <a class="sliding-middle-out" href="{{currentProject.gitHub}}">{{currentProject.gitHub}}</a></h3>
         <div style="align-content: center; " ng-show="hasVideoLink()">
