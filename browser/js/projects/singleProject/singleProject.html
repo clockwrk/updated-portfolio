@@ -6,11 +6,13 @@
         <h3 style="text-align: center;    padding: 20px;
     overflow: hidden;">{{currentProject.description}}</h3>
     </div>
-    <div class="row well technology" style="text-align: left;">
-        <h3 style="float:center;">The technology I used for this project include  <br> </h3>
-        <ul>
-            <li ng-repeat="tech in currentProject.technology"><a href="https://en.wikipedia.org/wiki/{{tech}}">{{tech}}</a></li>
-        </ul>
+    <div class="row well technology" style="text-align: center;">
+        <h3 style="text-align: center">The technology I used for this project include  <br> </h3>
+        <div class="table">
+            <ul id="horizontal-list">
+                <li ng-repeat="tech in currentProject.technology"><a href="https://en.wikipedia.org/wiki/{{tech}}">{{tech}}</a></li>
+            </ul>
+        </div>
     </div>
     <div class="row well">
         <h3 style="text-align: center;">Deployed at <a  class="sliding-middle-out" href="{{currentProject.deploy}}">{{currentProject.deploy}}</a></h3>

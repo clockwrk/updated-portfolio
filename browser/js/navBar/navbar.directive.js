@@ -15,8 +15,8 @@ app.directive('navbar', function($rootScope, $state, authFactory) {
             scope.links = [
                 { label: 'Home', state: 'home' },
                 { label: 'Projects', state: 'projects' },
-                { label: 'About Me', state: 'about' },
-                // { label: 'Contact Me', state: 'contact' },
+                { label: 'About Me', state: 'about' }
+                // { label: 'Feedback', state: 'contact' },
                 // { label: 'Admin ', state: 'admin', isAdmin: !$rootScope.admin },
                 // { label: 'Administrator', state: 'login', isAdmin: $rootScope.admin }
             ]
