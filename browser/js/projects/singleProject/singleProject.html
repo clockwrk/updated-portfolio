@@ -10,14 +10,14 @@
         <h3 style="text-align: center">The technology I used for this project include  <br> </h3>
         <div class="table">
             <ul id="horizontal-list">
-                <li ng-repeat="tech in currentProject.technology"><a href="https://en.wikipedia.org/wiki/{{tech}}">{{tech}}</a></li>
+                <li  ng-repeat="tech in currentProject.technology"><a href="https://en.wikipedia.org/wiki/{{tech}}">{{tech}}</a></li>
             </ul>
         </div>
     </div>
     <div class="row well">
         <h3 style="text-align: center;">Deployed at <a  class="sliding-middle-out" href="{{currentProject.deploy}}">{{currentProject.deploy}}</a></h3>
         <h3 style="text-align: center;"> Code hosted at <a class="sliding-middle-out" href="{{currentProject.gitHub}}">{{currentProject.gitHub}}</a></h3>
-        <div style="align-content: center; " ng-show="hasVideoLink()">
+        <div style="align-content: center; display: inline-block; " ng-show="hasVideoLink()">
             <iframe ng-src="{{trustSrc(movie.src)}}" width="560" height="315" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
