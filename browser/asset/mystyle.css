@@ -314,7 +314,7 @@ select {
 }
 
 .bg-1 {
-    background-color: rgba(83, 190, 209, 0.62);
+    background-color: rgba(83, 190, 209, 0.8);
     opacity: .2 z-index: 1000;
     color: #ffffff;
     overflow-y: auto;
@@ -323,7 +323,7 @@ select {
 }
 
 .bg-2 {
-    background-color: rgba(61, 173, 209, 0.62);
+    background-color: rgba(61, 173, 209, 0.8);
     color: #ffffff;
     border: 1px solid #e3e3e3;
     border-bottom: 0px;
@@ -331,7 +331,7 @@ select {
 }
 
 .bg-3 {
-    background-color: rgba(57, 159, 206, 0.62);
+    background-color: rgba(57, 159, 206, 0.8);
     color: #ffffff;
     border: 1px solid #e3e3e3;
     border-top: 0px;
