@@ -1,7 +1,7 @@
 # Portfolio
 ##My own custom designed portfolio site to show my work
 
-I decided to build my own website from the ground up over using a template so that I could have complete control over every detail of my site and deepend my web design skills.
+I decided to build my own website from the ground up over using a template so that I could have complete control over every detail of my site and deepen my web design skills.
 
 ## Features
 
