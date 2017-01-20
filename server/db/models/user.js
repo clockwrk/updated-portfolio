@@ -2,7 +2,6 @@
 var crypto = require('crypto')
 var _ = require('lodash');
 var Sequelize = require('sequelize')
-
 var db = require("./_db.js");
 
 module.exports = db.define('user', {
@@ -52,4 +51,4 @@ module.exports = db.define('user', {
         }
     }
 })
-console.log('Loading user')
+

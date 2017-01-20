@@ -6,7 +6,6 @@ app.factory('projectFactory', function($http) {
                     return response.data
                 })
                 .catch()
-
         },
         getSingleProject: function(projectID) {
             return $http.get('/api/project/' + projectID)
@@ -14,7 +13,6 @@ app.factory('projectFactory', function($http) {
                     return response.data
                 })
                 .catch()
-
         },
         postProject: function(project) {
             return $http.post('/api/project', project)
