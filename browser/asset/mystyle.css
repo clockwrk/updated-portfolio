@@ -107,6 +107,9 @@ a:hover {
     position: absolute;
     margin-right: -250px;
 }
+#top-image{
+    background-color:#555555;
+}
 
 
 /* Sidebar Styles */
@@ -401,14 +404,14 @@ select {
     animation: .5s .5s fade backwards ease-out;*/
 }
 
-.shadow {
+/*.shadow {
     -webkit-box-shadow: 14px 14px 25px 5px rgba(0, 0, 0, 0.4);
     /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    -moz-box-shadow: 14px 14px 25px 5px rgba(0, 0, 0, 0.4);
+/*    -moz-box-shadow: 14px 14px 25px 5px rgba(0, 0, 0, 0.4);*/
     /* Firefox 3.5 - 3.6 */
-    box-shadow: 14px 14px 25px 5px rgba(0, 0, 0, 0.4);
+/*    box-shadow: 14px 14px 25px 5px rgba(0, 0, 0, 0.4);*/
     /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
-}
+/*}*/
 
 .image-shadow {
     -webkit-filter: drop-shadow(12px 12px 25px rgba(0, 0, 0, 0.5));
