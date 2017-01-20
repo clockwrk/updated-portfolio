@@ -8,6 +8,8 @@ let bodyParser = require('body-parser')
 let chalk = require('chalk')
 let env = require(path.join(__dirname, './server/env'));
 let pg = require('pg');
+let http = require("http");
+
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
@@ -50,3 +52,8 @@ db.sync()
     .catch(function(err) {
         console.error(chalk.red(err.stack));
     });
+
+setInterval(function() {
+    console.log('Stay away awake')
+    http.get("http://joserenteria.nyc");
+}, 300000); // every 5 minutes (300000)
