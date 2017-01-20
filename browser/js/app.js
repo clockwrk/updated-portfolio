@@ -13,6 +13,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
     $urlRouterProvider.otherwise("/");
 }]);
 
+
 // app.run(function($rootScope, $state, authFactory) {
 //     $rootScope.admin = null;
 //     $rootScope.$on("$stateChangeStart", function(event, toState, toParams, fromState, fromParams, authFactory) {

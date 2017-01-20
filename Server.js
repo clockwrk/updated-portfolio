@@ -35,12 +35,13 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.static(path.join(__dirname, '/browser')));
 app.use(express.static(path.join(__dirname, '/node_modules')));
 
-app.use('/', router);
+app.use('*', router);
 
 app.use(function(err, req, res, next) {
     console.error(err.stack)
     res.status(500).send('Something broke!')
 })
+
 
 db.sync()
     .then(function() {
@@ -53,7 +54,3 @@ db.sync()
         console.error(chalk.red(err.stack));
     });
 
-setInterval(function() {
-    console.log('Stay away awake')
-    http.get("http://joserenteria.nyc");
-}, 300000); // every 5 minutes (300000)
