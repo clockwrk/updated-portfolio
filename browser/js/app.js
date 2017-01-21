@@ -1,4 +1,6 @@
+( function(){
 
+	
 var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'ngAnimate','angular-typed']);
 
 // app.run(function(editableOptions) {
@@ -26,3 +28,4 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
 // });
 
 
+})();
