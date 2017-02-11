@@ -112,6 +112,17 @@ a:hover {
     background-size: cover;
 }
 
+.divLeft {
+    width:50%;
+    float:left;
+    text-align: center
+}
+
+.divRight {
+    width:50%;
+    float:right;
+    text-align: center;
+}
 
 /* Sidebar Styles */
 
@@ -398,29 +409,7 @@ select {
     -o-animation: fadeinleft 800ms ease-in-out;
     -ms-animation: fadeinleft 800ms ease-in-out;
     animation: fadeinleft 800ms ease-in-out;
-    /*    -webkit-animation: .5s .5s fade backwards ease-out;
-    animation: .5s .5s fade backwards ease-out;*/
 }
-
-
-/*.shadow {
-    -webkit-box-shadow: 14px 14px 25px 5px rgba(0, 0, 0, 0.4);
-    /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-
-
-/*    -moz-box-shadow: 14px 14px 25px 5px rgba(0, 0, 0, 0.4);*/
-
-
-/* Firefox 3.5 - 3.6 */
-
-
-/*    box-shadow: 14px 14px 25px 5px rgba(0, 0, 0, 0.4);*/
-
-
-/* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
-
-
-/*}*/
 
 .image-shadow {
     -webkit-filter: drop-shadow(12px 12px 25px rgba(0, 0, 0, 0.5));
