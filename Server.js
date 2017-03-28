@@ -20,8 +20,6 @@ app.set('env', env)
 
 app.use('/api', require('./server/routes/index.js'));
 
-console.log("after database")
-
 router.use(function(req, res, next) {
     console.log('/' + req.method);
     next();
@@ -53,4 +51,3 @@ db.sync()
     .catch(function(err) {
         console.error(chalk.red(err.stack));
     });
-
