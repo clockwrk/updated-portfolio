@@ -27,23 +27,44 @@ a:hover {
     text-decoration: none;
 }
 
+ul{
+    list-style: none;
+    clear: left;
+    padding: 0;
+}
+
 
 /* Toggle Styles */
 
 #left {
+
     float: left;
     width: 33%;
 }
 
 #middle {
+
     float: left;
     width: 33%;
 }
 
 #right {
     float: left;
-    width: auto;
+    width: 33%;
 }
+
+ul#left li {
+    list-style: none;
+}
+
+ul#right li {
+    list-style: none;
+}
+
+ul#middle li {
+    list-style: none;
+}
+
 
 #column-wrapper {
     width: 70%;
@@ -115,13 +136,13 @@ a:hover {
 .divLeft {
     width:50%;
     float:left;
-    text-align: center
+    text-align:center;
 }
 
 .divRight {
     width:50%;
     float:right;
-    text-align: center;
+    text-align:center;
 }
 
 /* Sidebar Styles */

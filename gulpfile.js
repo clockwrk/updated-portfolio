@@ -41,7 +41,7 @@ gulp.task('buildJS', function() {
             presets: ['es2015']
         }))
         .pipe(ngAnnotate())
-        .pipe(uglify())
+        .pipe(uglify({mangle:false}))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./public'));
 });
