@@ -40,17 +40,20 @@ ul{
 
     float: left;
     width: 33%;
+    margin: auto;
 }
 
 #middle {
 
     float: left;
     width: 33%;
+    margin: auto;
 }
 
 #right {
     float: left;
     width: 33%;
+    margin: auto;
 }
 
 ul#left li {
