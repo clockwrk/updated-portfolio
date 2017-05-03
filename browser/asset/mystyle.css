@@ -289,7 +289,7 @@ ul#middle li {
     margin-top: -1px;
 }
 
-.social i#twitter:hover {
+.social i#code:hover {
     color: red;
 }
 
@@ -301,9 +301,9 @@ ul#middle li {
     color: #0177B5;
 }
 
-.social i#code:hover {
+/*.social i#code:hover {
     color: #29A329;
-}
+}*/
 
 .social i#stack:hover {
     color: #ED780E;
