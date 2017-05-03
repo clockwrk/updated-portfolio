@@ -1,31 +1,27 @@
-app.factory('projectFactory', function($http) {
+app.factory('projectFactory', $http => {
+    let getData =  function(response){
+      return response.data;
+    }
+    
     return {
-        getAllProjects: function() {
+        getAllProjects: () => {
             return $http.get('/api/project')
-                .then(function(response) {
-                    return response.data
-                })
+                .then(getData)
                 .catch()
         },
         getSingleProject: function(projectID) {
             return $http.get('/api/project/' + projectID)
-                .then(function(response) {
-                    return response.data
-                })
+                .then(getData)
                 .catch()
         },
         postProject: function(project) {
             return $http.post('/api/project', project)
-                .then(function(response) {
-                    return response.data
-                })
+                .then(getData)
                 .catch()
         },
         updateProject: function(updatedProject) {
             return $http.put('api/project', updatedProject)
-                .then(function(response) {
-                    return response.data
-                })
+                .then(getData)
                 .catch()
         }
     }
