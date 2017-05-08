@@ -3,18 +3,18 @@ let app = express()
 let router = express.Router()
 let path = require('path')
 let morgan = require('morgan')
-let db = require('./server/db/models/index.js')
-let bodyParser = require('body-parser')
-let chalk = require('chalk')
-let env = require(path.join(__dirname, './server/env'));
-let pg = require('pg');
-let http = require("http");
+let db = require('./server/db/models/index.js'),
+    bodyParser = require('body-parser'),
+    chalk = require('chalk'),
+    env = require(path.join(__dirname, './server/env')),
+    http = require("http"),
+    volleyball = require("volleyball");
 
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-router.use(morgan(':method :url :status :response-time ms - :res[content-length]'));
+router.use(volleyball);
 
 app.set('env', env)
 
