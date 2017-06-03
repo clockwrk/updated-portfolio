@@ -1,14 +1,23 @@
 
 
-	
+
 var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'ngAnimate','angular-typed']);
+
+var projectType = {
+	encode: function(str) { return str && str.replace(/ /g, "-"); },
+	decode: function(str) { return str && str.replace(/-/g, " "); },
+	is: angular.isString,
+	pattern: /[^/]+/
+};
 
 // app.run(function(editableOptions) {
 //     editableOptions.theme = 'bs3'; // bootstrap3 theme. Can be also 'bs2', 'default'
 // });
 
-app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
-    $locationProvider.html5Mode({
+app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$urlMatcherFactoryProvider', function($stateProvider, $urlRouterProvider, $locationProvider, $urlMatcherFactoryProvider) {
+		$urlMatcherFactoryProvider.type('project', projectType);
+
+		$locationProvider.html5Mode({
         enabled: true,
         requireBase: false
     });
@@ -53,5 +62,3 @@ app.directive('navbar', function($rootScope, $state, authFactory) {
 //         }
 //     });
 // });
-
-

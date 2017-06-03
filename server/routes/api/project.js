@@ -14,8 +14,9 @@ router.get('/', function(req, res, next) {
         .catch(next);
 })
 
-router.get('/:projectID', function(req, res, next) {
-    Project.findById(req.params.projectID)
+router.get('/:projectName', function(req, res, next) {
+    // Project.findById(req.params.projectID)
+      Project.findOne({where: {name:req.params.projectName}})
         .then(function(project) {
             res.send(project)
         })

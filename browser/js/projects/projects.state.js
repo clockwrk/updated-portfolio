@@ -12,13 +12,14 @@ app.config(function($stateProvider) {
     })
 
     $stateProvider.state('singleProject', {
-        url: '/projects/:id',
+        url: '/projects/{name:project}',
         templateUrl: '/js/projects/singleProject/singleProject.html',
         controller: 'singleProjectController',
         authenticate: false,
         resolve: {
             currentProject: function(projectFactory, $stateParams) {
-                return projectFactory.getSingleProject($stateParams.id)
+              console.log('stateParams',$stateParams);
+                return projectFactory.getSingleProject($stateParams.name);
             }
         }
     });

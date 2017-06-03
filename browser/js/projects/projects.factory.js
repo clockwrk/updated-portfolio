@@ -2,15 +2,16 @@ app.factory('projectFactory', $http => {
     let getData =  function(response){
       return response.data;
     }
-    
+
     return {
         getAllProjects: () => {
             return $http.get('/api/project')
                 .then(getData)
                 .catch()
         },
-        getSingleProject: function(projectID) {
-            return $http.get('/api/project/' + projectID)
+        getSingleProject: function(projectName) {
+          console.log("ProjectName", projectName)
+            return $http.get('/api/project/' + projectName)
                 .then(getData)
                 .catch()
         },

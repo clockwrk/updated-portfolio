@@ -1,15 +1,15 @@
-let express = require('express')
-let app = express()
-let router = express.Router()
-let path = require('path')
-let morgan = require('morgan')
-let db = require('./server/db/models/index.js'),
+let express = require('express'),
+    app = express(),
+    router = express.Router(),
+    path = require('path'),
+    morgan = require('morgan'),
+    db = require('./server/db/models/index.js'),
     bodyParser = require('body-parser'),
     chalk = require('chalk'),
     env = require(path.join(__dirname, './server/env')),
     http = require("http"),
-    volleyball = require("volleyball");
-
+    volleyball = require("volleyball"),
+    opn = require('opn');
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
@@ -47,6 +47,7 @@ db.sync()
         app.listen(PORT, function() {
             console.log('Live at Port 3000');
         });
+        opn('http://localhost:3000');
     })
     .catch(function(err) {
         console.error(chalk.red(err.stack));

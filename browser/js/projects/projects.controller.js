@@ -1,9 +1,10 @@
 app.controller('projectController', function($scope, allProjects) {
-    $scope.projects = allProjects
+    $scope.projects = allProjects;
 })
 
-app.controller('singleProjectController', function($scope, projectFactory, currentProject, $sce) {
+app.controller('singleProjectController', function($scope, projectFactory, currentProject, $sce, $stateParams) {
     $scope.currentProject = currentProject;
+    $scope.projectName = $stateParams.name;
 
     $scope.trustSrc = function(src) {
         return $sce.trustAsResourceUrl(src);

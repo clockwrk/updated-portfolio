@@ -1,7 +1,7 @@
-<div class="row well project-tile" style="text-align: center; display: block;" ui-sref="singleProject({id:project.id})">
+<div class="row well project-tile" style="text-align: center; display: block;" ui-sref="singleProject({name:project.name})">
     <img class='project-picture' src="{{project.imageUrl}}">
     <div style="float: center">
-        <a ui-sref="singleProject({id:project.id})"><h2 id="project"  style="text-align: center" class="sliding-middle-out" >{{ project.name }}</h2></a>
+        <a ui-sref="singleProject({name:project.name})"><h2 id="project"  style="text-align: center" class="sliding-middle-out" >{{ project.name }}</h2></a>
         <h4>{{ project.snippet }}</h4>
     </div>
 </div>
