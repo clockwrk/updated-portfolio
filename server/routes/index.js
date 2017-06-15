@@ -11,7 +11,7 @@ router.use('/authentication', require('./api/authentication.js'))
 router.use('/reply', require('./api/reply.js'))
 router.use('/resume', router.get('/',function(req,res){
 
-	var file = path.join(__dirname, '../../browser/asset/Jose_Renteria_Resume.pdf');
+	var file = path.join(__dirname, '../../browser/asset/Jose_Renteria_Resume.doc');
 	console.log('The resume route', file)
 
 
@@ -28,7 +28,7 @@ router.use('/resume', router.get('/',function(req,res){
  //  		filestream.pipe(res);
  //  	}else{
  //  		res.
-  	
+
 	})
 )
 
