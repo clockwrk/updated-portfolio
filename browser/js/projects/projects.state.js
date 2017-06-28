@@ -19,7 +19,9 @@ app.config(function($stateProvider) {
         resolve: {
             currentProject: function(projectFactory, $stateParams) {
               console.log('stateParams',$stateParams);
-                return projectFactory.getSingleProject($stateParams.name);
+              var theproject = projectFactory.getSingleProject($stateParams.name);
+              console.log('the resolved project',theproject)
+                return theproject;
             }
         }
     });

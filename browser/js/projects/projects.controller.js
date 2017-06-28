@@ -3,6 +3,8 @@ app.controller('projectController', function($scope, allProjects) {
 })
 
 app.controller('singleProjectController', function($scope, projectFactory, currentProject, $sce, $stateParams) {
+
+  console.log("currentProject",currentProject)
     $scope.currentProject = currentProject;
     $scope.projectName = $stateParams.name;
 

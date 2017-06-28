@@ -1,5 +1,6 @@
 app.factory('projectFactory', $http => {
     let getData =  function(response){
+      console.log(response.data)
       return response.data;
     }
 
