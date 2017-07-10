@@ -4,7 +4,7 @@ let Project = db.model('project');
 
 let projects = [
   {
-    'deploy': 'https://www.bumbleandbumble.com/_efb/meme/', 'description': 'This is my current star project. Created this meme-generator with just jQuery and HTML5 Canvas API in 2 weeks.', 'gitHub' : 'https://github.com/clockwrk/jquery-meme-generator', 'name': 'Meme Generator', 'techList': 'HTML5 Canvas API, jQuery,AngularJS, ExpressJS, JavaScript, CSS, Heroku', 'imageUrl': '/asset/meme-generator.png', 'videoLink': ''
+    'deploy': 'https://www.bumbleandbumble.com/_efb/meme/', 'description': 'This is my current star project. Created this meme-generator with just jQuery and HTML5 Canvas API in 2 weeks.', 'gitHub' : 'https://github.com/clockwrk/jquery-meme-generator', 'name': 'Meme Generator', 'techList': 'HTML5 Canvas API, Social Media API\'s, jQuery, PHP, ExpressJS, JavaScript, CSS, Heroku', 'imageUrl': '/asset/meme-generator.png', 'videoLink': ''
   },
     { 'deploy': 'https://desolate-castle-17166.herokuapp.com/', 'description': 'Created this dashboard to visually show changes in various Nigerian crop prices, production and consumption levels changed over time', 'gitHub': 'https://github.com/clockwrk/releaf-programming-challenge', 'name': 'Nigerian Crop DashBoard', 'techList': 'JQuery ,FusionCharts , JavaScript, HTML5, CSS, AngularJS, PostgreSQL, Heroku', 'imageUrl': '/asset/nigeria-crop-dashboard.gif', 'videoLink': '' },
     { 'deploy': 'https://markey.herokuapp.com/', 'description': ' This is an e-commerce site that simulates buying tickets to concerts.', 'gitHub': 'https://github.com/gewl/markey', 'name': 'Markey', 'techList': ' JavaScript, HTML5, CSS, AngularJS, PostgreSQL, Heroku, REST API', 'imageUrl': '/asset/Markey-min.png', 'videoLink': '' },
