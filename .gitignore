@@ -1,7 +1,1 @@
-node_modules/
-.DS_Store
-bower_components
-.env
-credentials.js
-temp/
-ideas
+/node_modules
