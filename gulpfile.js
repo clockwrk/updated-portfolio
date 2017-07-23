@@ -59,7 +59,7 @@ gulp.task('copy', function() {
         .pipe(gulp.dest('browser/vendor/bootstrap'))
 
     gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/jquery/dist/jquery.min.js'])
-        .pipe(gulp.dest('browser/browser/vendor/jquery'))
+        .pipe(gulp.dest('browser/vendor/jquery'))
 
     gulp.src([
             'node_modules/font-awesome/**',
