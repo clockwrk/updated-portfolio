@@ -51,11 +51,11 @@ app.use(function(err, req, res, next) {
 
 // db.sync()
 //     .then(function() {
-        var PORT = process.env.PORT || 3000;
+        var PORT = process.env.PORT || 8080;
         app.listen(PORT, function() {
-            console.log('Live at Port 3000');
+            console.log('Live at Port 8080');
         });
-        opn('http://localhost:3000');
+        opn('http://localhost:8080');
     // })
     // .catch(function(err) {
     //     console.error(chalk.red(err.stack));
