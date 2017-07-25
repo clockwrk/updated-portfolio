@@ -587,3 +587,7 @@ div#maincontent {
   min-height:300px;
   width:100%;
 }
+
+#Imvue-description{
+  font-weight: lighter;
+}
