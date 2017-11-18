@@ -1,0 +1,102 @@
+HTML
+
+declare all scrips
+
+<body ng-app="JoseApp">
+  <div ng-controller="FullAppCtrl">
+    <nav ng-controller="NaviagtionController">
+        <ul>
+          <li ng-repeat="menuItem in menuItems">
+            {{ menuItem }}
+          </li>
+        </ul>
+    </nav>
+    <div ng-controller="MainController">
+      <h1 ng-click(formatPercentage())>This is my title</h1>
+
+      //ng-model
+      <input name='cardType' type='text' ng-model="creditCardNumber">
+      {{creditCardNumber}}
+    <div>
+    <a ui-sref="home"></a>
+    <a ui-sref="contact"></a>
+    <ui-view></ui-view>
+  </div>
+</body>
+
+MODULE
+
+var app = angular.module('JoseApp', []);
+
+CONTROLLER
+app.controller('MainController', function($scope, MainFactory){
+
+$scope.formatPercentage =  MainFacory.formatPercentages;
+$scope.creditCardNumber = 100;
+
+})
+
+FACTORY
+
+app.factory('MainFactory', function() {
+  var tools = {};
+  tools.formatPercentage = function(n) {
+
+  }
+
+  tools.getallprojects = function(blah) {
+      return $http.get('/api/project', )
+          .then(function(response) {
+              return response.data
+          })
+          .catch()
+  }
+
+  return tools;
+
+})
+
+STATE
+
+app.config(function($stateProvider){
+ $stateProvider.state('home', {
+    url : '/',
+    templateUrl: './filelocation.html',
+    controller: 'projectController',
+    authenticate: false,
+    resolve: {
+        allProjects: function(projectFactory) {
+            return projectFactory.getAllProjects();
+        }
+    }
+ })
+})
+
+
+Directive
+
+
+'use strict';
+
+juke.directive('player', function (PlayerFactory) {
+  return {
+    restrict: 'E',
+    templateUrl: '/js/player/templates/player.html',
+    link: function (scope) {
+      angular.extend(scope, PlayerFactory); // copy props from param2 to param1
+
+      scope.toggle = function () {
+        if ( PlayerFactory.isPlaying() ) PlayerFactory.pause();
+        else PlayerFactory.resume();
+      };
+
+      scope.getPercent = function () {
+        return PlayerFactory.getProgress() * 100;
+      };
+
+      scope.handleProgressClick = function (evt) {
+        PlayerFactory.seek(evt.offsetX / evt.currentTarget.scrollWidth);
+      };
+    }
+  };
+});
