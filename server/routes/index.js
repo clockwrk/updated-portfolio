@@ -8,7 +8,7 @@ var path = require('path'),
 
 router.use('/resume', router.get('/',function(req,res){
 
-	var file = path.join(__dirname, '../../browser/asset/Jose_Renteria_Resume.doc');
+	var file = path.join(__dirname, '../../browser/asset/Jose_Renteria_Resume.pdf');
 	console.log('The resume route', file)
 	res.download(file);
 	})

@@ -1,9 +1,4 @@
-// var connect = require('connect');
-// var serveStatic = require('serve-static');
-// connect().use(serveStatic(__dirname)).listen(8080, function(){
-//     console.log('Server running on 8080...');
-// });
-//
+
 
 
 let express = require('express'),
@@ -51,11 +46,11 @@ app.use(function(err, req, res, next) {
 
 // db.sync()
 //     .then(function() {
-        var PORT = process.env.PORT || 8080;
+        var PORT = process.env.PORT || 3000;
         app.listen(PORT, function() {
-            console.log('Live at Port 8080');
+            console.log('Live at Port 3000');
         });
-        opn('http://localhost:8080');
+        opn('http://localhost:3000');
     // })
     // .catch(function(err) {
     //     console.error(chalk.red(err.stack));
